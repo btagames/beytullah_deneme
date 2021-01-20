@@ -1197,7 +1197,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1487193083}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1228,25 +1228,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92699f7d14716104f88a2a6ade084ba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kelimSayisi: 0
-  cevapSayisi: 0
-  dogruSayisi: 0
-  dogruCevap: 
-  dogruCevapText: {fileID: 1605893192}
-  controller: {fileID: 622634200}
-  rndSoruIndex: 0
-  itemParent: {fileID: 1956605110}
-  _konumList: []
-  _indexList: 
-  yes: {fileID: 8300000, guid: 814a95b49ca0039479486f26ba95e370, type: 3}
-  no: {fileID: 8300000, guid: 4a02f801d855698478750c8b689c456d, type: 3}
-  ses: {fileID: 0}
-  as_: {fileID: 622634202}
-  gs: {fileID: 0}
-  returnButton: {fileID: 1549255218}
-  confettiFx: {fileID: 6290281207697285282, guid: c44aa2bdf6d61544a8a5b0ebb9d2eb93,
-    type: 3}
-  wrongFx: {fileID: 8917918353991737545, guid: c5ce39471d37a834c80ed2c471e45a0a, type: 3}
 --- !u!1 &1549255218
 GameObject:
   m_ObjectHideFlags: 0

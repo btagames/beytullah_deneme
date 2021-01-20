@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5107567193022989453}
   - component: {fileID: 2127144109815048444}
   - component: {fileID: 5017715159585512105}
-  - component: {fileID: 5619632634469050908}
   - component: {fileID: 2145125206153482439}
   m_Layer: 5
   m_Name: KonumHeceItem
@@ -91,7 +90,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.3678894, y: 0.18603516}
+  m_Offset: {x: -1.8421631, y: -0.050994873}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -102,7 +101,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 242.64789, y: 108.49292}
+  m_Size: {x: 199.01538, y: 88.09564}
   m_EdgeRadius: 0
 --- !u!50 &5017715159585512105
 Rigidbody2D:
@@ -125,30 +124,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5619632634469050908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5261209705047337700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d365cf6a3768744d963c90308e46aa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates: []
-  neededindex: 0
-  control: {fileID: 0}
-  ba: {x: 0, y: 0, z: 0}
-  ansright: 0
-  col: {fileID: 0}
-  canvas: {fileID: 0}
-  itemParent: {fileID: 0}
-  konum: {fileID: 0}
-  timeStartedLerping: 0
-  lerpTime: 0.5
-  bi: {x: 0, y: 0}
 --- !u!95 &2145125206153482439
 Animator:
   serializedVersion: 3

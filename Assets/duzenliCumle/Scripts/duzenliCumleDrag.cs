@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class heceCumleDrag : EventTrigger
+public class duzenliCumleDrag : EventTrigger
 {
     public int neededindex;
     public GameObject control;
@@ -31,7 +31,7 @@ public class heceCumleDrag : EventTrigger
         {
             Physics2D.IgnoreCollision(this.gameObject.GetComponent<BoxCollider2D>(), collision);
         }
-        if (collision.name == "konum")
+        if (collision.name == this.name)
         {
             col = collision;
             ansright = 1;
@@ -45,7 +45,7 @@ public class heceCumleDrag : EventTrigger
         {
             Physics2D.IgnoreCollision(this.gameObject.GetComponent<BoxCollider2D>(), collision);
         }
-        if (collision.name == "konum")
+        if (collision.name == this.name)
         {
             col = collision;
             ansright = 1;
@@ -69,7 +69,7 @@ public class heceCumleDrag : EventTrigger
             this.gameObject.transform.position = col.transform.position;
             this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
             this.GetComponent<EventTrigger>().enabled = false;
-            this.gameObject.transform.SetParent(col.transform);
+            col.gameObject.SetActive(false);
 
         }
         else if (ansright == 0)
@@ -98,7 +98,7 @@ public class heceCumleDrag : EventTrigger
         konum = GameObject.Find("konum");
         canvas = GameObject.Find("Canvas");
         itemParent = GameObject.Find("ItemParent");
-        control = GameObject.Find("control");
+        control = GameObject.Find("controller");
         Input.multiTouchEnabled = false;
     }
 

@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class heceCumleController : MonoBehaviour
+public class duzenliCumleController : MonoBehaviour
 {
 
 
@@ -45,6 +45,8 @@ public class heceCumleController : MonoBehaviour
 
     public void kelimeAdd()
     {
+        itemParent.GetComponent<GridLayoutGroup>().enabled = true;
+        ItemKonum.GetComponent<GridLayoutGroup>().enabled = true;
         for (int i = 0; i < _soruList.Count; i++)
         {
             GameObject obj = Instantiate(Item, Item.transform.position, Quaternion.identity);
@@ -55,6 +57,7 @@ public class heceCumleController : MonoBehaviour
             obj.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = _soruList[i]._kelimeler[secilenKelime];
             obj.name = _soruList[i]._kelimeler[secilenKelime];
             _secilenKelimelerList.Add(obj.name);
+            
         }
 
         StartCoroutine(soruAdd());
@@ -65,7 +68,7 @@ public class heceCumleController : MonoBehaviour
     IEnumerator soruAdd()
     {
         yield return new WaitForSeconds(.5f);
-
+        itemParent.GetComponent<GridLayoutGroup>().enabled = false;
         rndSoru = Random.Range(0, _soruList.Count);
 
         for (int i = 0; i < _soruList[rndSoru]._kelimeler.Count; i++)
@@ -81,7 +84,7 @@ public class heceCumleController : MonoBehaviour
                 obj.transform.localScale = new Vector3(1, 1, 1);
                 obj.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = _soruList[rndSoru]._kelimeler[i];
                 obj.name = _soruList[rndSoru]._kelimeler[i];
-
+                obj.GetComponent<EventTrigger>().enabled = false;
 
 
 
@@ -93,6 +96,28 @@ public class heceCumleController : MonoBehaviour
                 obj.transform.localScale = new Vector3(1, 1, 1);
                 obj.name = _soruList[rndSoru]._kelimeler[i];
             }
+        }
+
+        yield return new WaitForSeconds(.1f);
+        ItemKonum.GetComponent<GridLayoutGroup>().enabled = false;
+    }
+
+
+    public void cevapControl()
+    {
+        int say = 0;
+        for (int i = 0; i < ItemKonum.transform.childCount; i++)
+        {
+            if(ItemKonum.transform.GetChild(i).gameObject.name == _soruList[rndSoru]._kelimeler[i])
+            {
+                say++;
+            }
+        }
+
+
+        if(say == _soruList[rndSoru]._kelimeler.Count)
+        {
+
         }
     }
 }

@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/duzenliCumle/duzenliCumle.unity
+    guid: 86ac39221f9d45146bed3f6c0bc1d369
   m_configObjects: {}
